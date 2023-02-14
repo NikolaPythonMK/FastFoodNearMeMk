@@ -1,7 +1,3 @@
-// import { dataObject } from '../data/dataObject.js';
-
-// console.log(dataObject);
-
 let restaurants = [];
 
 // Create a map object
@@ -129,7 +125,8 @@ searchButton.addEventListener('click', function () {
 // Add an event listener to the search input to search for restaurants
 // when the user hits enter
 searchInput.addEventListener('keyup', function (event) {
-    if (event.keyCode === 13) {
+    if (event.key === 'Enter') {
+        console.log("inside")
         searchRestaurants(searchInput.value);
     }
 });
